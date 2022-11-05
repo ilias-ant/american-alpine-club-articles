@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "american-alpine-club-articles"
+version = "0.1.0"
+description = "Articles from the American Alpine Club: AAJ and ANAC."
+authors = ["ilias-ant <ilias.antonopoulos@yahoo.gr>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ilias-ant/american-alpine-club-articles"
+keywords = ["aac", "anac", "aaj"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/ilias-ant/american-alpine-club-articles/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+
+kaggle = "^1.5.12"
+Scrapy = "~2.7.1"
+selenium = "~4.5.0"
+opensearch-py = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+bandit = "^1.7.4"
+black = "^22.10.0"
+isort = "^5.10.1"
+autoflake = "^1.7.7"
+pre-commit = "^2.20.0"
+
+[tool.black]
+line-length = 120
+skip-string-normalization = false
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.pytest_cache
+  | \.test_coverage
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.bandit]
+skips = ["B404", "B602", "B607"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
