@@ -9,11 +9,11 @@ from . import items
 
 class ArticleLoader(ItemLoader):
 
-    default_output_processor = Compose(TakeFirst())
+    default_output_processor = Compose(TakeFirst(), str.strip)
     default_item_class = items.Article
 
-    body_out = Compose(Join(), str.strip)
-    author_out = Compose(TakeFirst(), str.strip, str.strip, lambda x: re.sub(r".$", "", x))
+    body_out = Compose(Join())
+    author_out = Compose(TakeFirst(), str.strip, lambda x: re.sub(r".$", "", x))
     climb_year_out = Compose(
         lambda years: [y for y in years if "N/A" not in y],
         TakeFirst(),
