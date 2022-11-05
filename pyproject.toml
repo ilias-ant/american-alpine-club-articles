@@ -6,7 +6,7 @@ authors = ["ilias-ant <ilias.antonopoulos@yahoo.gr>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/ilias-ant/american-alpine-club-articles"
-keywords = ["aac", "anac", "aaj"]
+keywords = ["aac", "accidents", "climbing", "mountaineering", "alpinism"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
