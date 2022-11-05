@@ -9,6 +9,28 @@ To scrape all articles from said domain, first initiate an [Opensearch](https://
 docker compose up
 ```
 
+To verify that the cluster is healthy:
+
+```shell
+curl -XGET --insecure -u 'admin:admin' 'https://localhost:9200/_cluster/health'
+```
+
+you should see something like this:
+
+```json
+{
+  "cluster_name":"opensearch-cluster",
+  "status":"green",
+  "number_of_nodes":2,
+  "number_of_data_nodes":2,
+  "discovered_master":true,
+  "discovered_cluster_manager":true,
+  "active_primary_shards":8,
+  ...,
+  "active_shards_percent_as_number":100.0
+}
+```
+
 Then, assuming that you have already set up a Python virtual environment for this project:
 
 ```shell
