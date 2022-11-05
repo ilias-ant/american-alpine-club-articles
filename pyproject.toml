@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "american-alpine-club-articles"
+name = "aac-articles"
 version = "0.1.0"
-description = "Articles from the American Alpine Club: AAJ and ANAC."
+description = "Articles from the American Alpine Club publications: AAJ and ANAC."
 authors = ["ilias-ant <ilias.antonopoulos@yahoo.gr>"]
 license = "MIT"
 readme = "README.md"
@@ -24,8 +24,8 @@ classifiers = [
 python = ">=3.9,<3.10"
 
 kaggle = "^1.5.12"
+pandas = "^1.5.1"
 Scrapy = "~2.7.1"
-selenium = "~4.5.0"
 opensearch-py = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
@@ -34,6 +34,10 @@ black = "^22.10.0"
 isort = "^5.10.1"
 autoflake = "^1.7.7"
 pre-commit = "^2.20.0"
+
+[tool.poetry.scripts]
+kaggle_publish_new_dataset = "aac_articles.publishers.kaggle:publish_new_dataset"
+kaggle_publish_new_dataset_version = "aac_articles.publishers.kaggle:publish_new_dataset_version"
 
 [tool.black]
 line-length = 120

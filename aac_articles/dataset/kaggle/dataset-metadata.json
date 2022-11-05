@@ -1,0 +1,83 @@
+{
+  "title": "American Alpine Club articles",
+  "subtitle": "climbing accidents and major new climbs",
+  "description": "Articles from the American Alpine Club publications: AAJ (the most comprehensive worldwide source of information on major new climbs - published since 1929) and ANAC (documenting the most significant and teachable climbing accidents - published annually since 1948)",
+  "id": "iantonopoulos/american-alpine-club-articles",
+  "ownerUser": "iantonopoulos",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "History", "Mountains", "Sports"
+  ],
+  "resources": [
+    {
+      "path": "articles.csv",
+      "description": "Articles from the American Alpine Club publications - can be either AAJ or ANAC publication.",
+      "schema": {
+        "fields": [
+          {
+            "name": "url",
+            "description": "URL of the article",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "publication",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "description": "",
+            "type": "string"
+          },
+                    {
+            "name": "author",
+            "description": "",
+            "type": "string"
+          },
+                    {
+            "name": "climb_year",
+            "description": "",
+            "type": "string"
+          },
+                    {
+            "name": "publication_year",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "link_to_pdf",
+            "description": "",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+
+  "created": "2022-11-05T20:10:50.52Z",
+  "contributors": [
+    {
+      "title": "Ilias Antonopoulos",
+      "email": "ilias.antonopoulos@yahoo.gr",
+      "role": "author"
+}]
+}

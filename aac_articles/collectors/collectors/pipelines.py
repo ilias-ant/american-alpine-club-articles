@@ -1,9 +1,23 @@
+from datetime import datetime
+
 from itemadapter import ItemAdapter
 from opensearchpy import OpenSearch
+from scrapy import exceptions
 
 
 class ArticlePipeline:
     def process_item(self, item, spider):
+
+        expectations = (
+            item["publication"] in ("ANAM", "AAJ"),
+            "publication_year" in item,
+        )
+
+        if not all(expectations):
+            raise exceptions.DropItem()
+
+        item["scraped_at"] = datetime.utcnow().isoformat()  # in ISO 8601 format
+
         return item
 
 
@@ -12,14 +26,6 @@ class OpenSearchPipeline:
     index_name = "articles"
     index_body = {
         "settings": {"index": {"number_of_shards": 4}},
-        "mappings": {
-            "properties": {
-                "vol": {"type": "integer"},
-                "issue": {"type": "integer"},
-                "climb_year": {"type": "integer"},
-                "publication_year": {"type": "integer"},
-            }
-        },
     }
 
     def __init__(self, host: str, port: int, auth: tuple):

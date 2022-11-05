@@ -59,33 +59,6 @@ services:
     networks:
       - opensearch-net
 
-  selenium:
-    image: selenium/hub:4.5.3-20221024
-    container_name: selenium
-    ports:
-      - "4442:4442"
-      - "4443:4443"
-      - "4444:4444"
-
-  firefox:
-    image: selenium/node-firefox:106.0-geckodriver-0.32-grid-4.5.3-20221024
-    container_name: firefox
-    links:
-      -  selenium
-    environment:
-      - HUB_HOST=hub
-      - HUB_PORT=4444
-      - SE_EVENT_BUS_HOST=selenium
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_SESSION_TIMEOUT=3000
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-      - SE_NODE_MAX_SESSIONS=2
-      - SE_START_XVFB=true
-      - SE_VNC_NO_PASSWORD=1
-    ports:
-      - "5901:5900"
-
 volumes:
   opensearch-data1:
   opensearch-data2:
