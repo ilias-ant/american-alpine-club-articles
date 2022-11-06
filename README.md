@@ -15,3 +15,16 @@ The project consists of the following components:
 - **opensearch-cluster**: an [OpenSearch](https://opensearch.org/) cluster, where the scraped articles are indexed.
 - **publishers**: functionality responsible for the publication of the articles index (e.g. as Kaggle dataset).
 - **dataset**: the raw dataset, in CSV format.
+
+## Citation
+
+```bibtex
+@misc{ilias antonopoulos_2022, 
+      title={AAC: climbing accidents and major new climbs}, 
+      url={https://www.kaggle.com/dsv/4457812}, 
+      DOI={10.34740/KAGGLE/DSV/4457812}, 
+      publisher={Kaggle}, 
+      author={Ilias Antonopoulos},
+      year={2022} 
+}
+```

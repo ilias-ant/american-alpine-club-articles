@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "aac-articles"
-version = "0.1.0"
+version = "1.0.0"
 description = "Articles from the American Alpine Club publications: AAJ and ANAC."
 authors = ["ilias-ant <ilias.antonopoulos@yahoo.gr>"]
-license = "MIT"
 readme = "README.md"
+license = "Apache-2.0 license"
 repository = "https://github.com/ilias-ant/american-alpine-club-articles"
 keywords = ["aac", "accidents", "climbing", "mountaineering", "alpinism"]
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Intended Audience :: Education",
     "Intended Audience :: Science/Research",

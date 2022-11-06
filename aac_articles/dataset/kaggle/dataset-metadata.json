@@ -1,7 +1,7 @@
 {
-  "title": "American Alpine Club articles",
-  "subtitle": "climbing accidents and major new climbs",
-  "description": "Articles from the American Alpine Club publications: AAJ (the most comprehensive worldwide source of information on major new climbs - published since 1929) and ANAC (documenting the most significant and teachable climbing accidents - published annually since 1948)",
+  "title": "AAC: climbing accidents and major new climbs",
+  "subtitle": "Articles from the American Alpine Club publications.",
+  "description": "Articles from the American Alpine Club publications: \n- AAJ: the most comprehensive worldwide source of information on major new climbs - published since 1929 \n- ANAC: documenting the most significant and teachable climbing accidents - published annually since 1948",
   "id": "iantonopoulos/american-alpine-club-articles",
   "licenses": [
     {
@@ -9,7 +9,9 @@
     }
   ],
   "keywords": [
-    "History", "Mountains", "Sports"
+    "History",
+    "Mountains",
+    "Sports"
   ],
   "resources": [
     {
@@ -20,63 +22,78 @@
           {
             "name": "url",
             "description": "URL of the article",
-            "type": "string"
+            "type": "string",
+            "format": "uri"
           },
           {
             "name": "type",
-            "description": "",
-            "type": "string"
+            "description": "A designated category that the article belongs to",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "publication",
-            "description": "",
-            "type": "string"
+            "description": "The publication the article belongs to (can be either ANAC or AAJ)",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "title",
-            "description": "",
-            "type": "string"
+            "description": "Title of the article",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "location",
-            "description": "",
-            "type": "string"
+            "description": "Geographical location of the event covered by the article",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "body",
-            "description": "",
-            "type": "string"
+            "description": "The body of the article",
+            "type": "string",
+            "format": "default"
           },
-                    {
+          {
             "name": "author",
-            "description": "",
-            "type": "string"
+            "description": "Author of the article",
+            "type": "string",
+            "format": "default"
           },
-                    {
+          {
             "name": "climb_year",
-            "description": "",
-            "type": "string"
+            "description": "Year that the event of the article took place",
+            "type": "string",
+            "format": "default"
           },
-                    {
+          {
             "name": "publication_year",
-            "description": "",
-            "type": "string"
+            "description": "Year that the event of the article got published",
+            "type": "string",
+            "format": "default"
           },
           {
             "name": "link_to_pdf",
-            "description": "",
-            "type": "string"
+            "description": "URL of the associated PDF attachment",
+            "type": "string",
+            "format": "uri"
           }
         ]
-      }
+      },
+      "name": "articles",
+      "profile": "tabular-data-resource"
     }
   ],
-
   "created": "2022-11-05T20:10:50.52Z",
   "contributors": [
     {
       "title": "Ilias Antonopoulos",
       "email": "ilias.antonopoulos@yahoo.gr",
       "role": "author"
-}]
+    }
+  ],
+  "name": "articles",
+  "homepage": "https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles",
+  "version": "1.0.0"
 }
