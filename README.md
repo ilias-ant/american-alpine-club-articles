@@ -2,6 +2,10 @@
 
 [![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles)
 
+---
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Articles from the American Alpine Club's publications: [AAJ](https://publications.americanalpineclub.org/about_the_aaj) 
 and [ANAC](https://publications.americanalpineclub.org/about_the_accidents). 
 
