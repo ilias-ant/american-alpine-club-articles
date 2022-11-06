@@ -58,4 +58,4 @@ While you're waiting, you may find it useful to:
 
 and you'll be able to monitor the index live, like so:
 
-<img src="https://github.com/ilias-ant/american-alpine-club-articles/blob/main/static/opensearch-dashboard.jpg" width="90%">
+<img src="https://github.com/ilias-ant/american-alpine-club-articles/blob/main/static/opensearch-dasboard.png" width="90%">
