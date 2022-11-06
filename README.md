@@ -1,8 +1,12 @@
-# american-alpine-club-datasets
-
-[![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles)
-
----
+<div align="center">
+    <h1>american-alpine-club-datasets</h1>
+    <p><a href="https://publications.americanalpineclub.org/">AAC</a>: climbing accidents and major new climbs.</p>
+    <a href="https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles">
+        <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt="kaggle dataset">
+    </a>
+    
+</div>
+<hr>
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
