@@ -49,3 +49,13 @@ an Opensearch ``articles`` index.
 **This might take a while**, because the spider is configured is such a way in order for the domain to be scraped in a 
 "gentle" manner, without affecting its performance.
 
+While you're waiting, you may find it useful to:
+
+1. navigate to [http://localhost:5601](http://localhost:5601) for OpenSearch Dashboards.
+2. login with the default username (admin) and password (admin).
+3. create an index pattern for the ``articles`` index (based on ``scraped_at``).
+4. navigate to [http://localhost:5601/app/discover](http://localhost:5601/app/discover/).
+
+and you'll be able to monitor the index live, like so:
+
+<img src="https://github.com/ilias-ant/american-alpine-club-articles/blob/main/static/opensearch-dashboard.jpg" width="90%">

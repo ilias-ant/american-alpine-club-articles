@@ -7,7 +7,6 @@ and [ANAC](https://publications.americanalpineclub.org/about_the_accidents).
 
 This work has been published as a [Kaggle dataset](https://www.kaggle.com/datasets/iantonopoulos/american-alpine-club-articles).
 
-
 <img src="https://github.com/ilias-ant/american-alpine-club-articles/blob/main/static/kaggle-thumbnail-image.jpg" width="90%" text="Free person hiking in snow mountain photo, public domain sport CC0 image | https://www.rawpixel.com/">
 
 The project consists of the following components:
