@@ -10,7 +10,7 @@ class ArticlePipeline:
 
         expectations = (
             item["publication"] in ("ANAM", "AAJ"),
-            "publication_year" in item,
+            ("publication_year" in item) and (len(item["publication_year"]) == 4),
         )
 
         if not all(expectations):

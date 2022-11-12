@@ -59,6 +59,7 @@ class ArticlesSpider(scrapy.Spider):
         article = item_loaders.ArticleLoader(response=response)
 
         article.add_value("url", response.url)
+        article.add_value("referer", response.request.headers.get("Referer"))
         article.add_value("type", metadata["type"])
         article.add_value("publication", metadata["publication"])
         article.add_xpath("title", '//div[contains(@class, "article-body")]//h2[@class="title"]/text()')
@@ -87,7 +88,14 @@ class ArticlesSpider(scrapy.Spider):
         article.add_xpath(
             "publication_year",
             '//div[contains(@class, "article-body")]/div/'
-            'span[contains(., "Publication Year") and contains(., "Author") and contains(., "Climb Year")]/i[3]/text()',
+            'span[contains(., "Publication Year") and contains(., "Author") and contains(., "Climb Year")]'
+            "/i[3]/text()",
+        )
+        article.add_xpath(
+            "publication_year",
+            '//div[contains(@class, "article-body")]/div/'
+            'span[contains(., "Publication Year") and not(contains(., "Author")) and contains(., "Climb Year")]'
+            "/i[2]/text()",
         )
 
         yield article.load_item()
