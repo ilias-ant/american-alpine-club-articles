@@ -17,6 +17,7 @@ class KagglePublisher(object):
 
         self.data_dir = "aac_articles/dataset/kaggle"
         self.data_file = f"articles.csv"
+        self.no_publish_cols = ["scraped_at", "referer"]
         self.client = OpenSearch(
             hosts=[{"host": host, "port": port}],
             http_compress=True,  # enables gzip compression for request bodies
@@ -56,8 +57,7 @@ class KagglePublisher(object):
 
         dataset = pd.DataFrame.from_records(dataset)
 
-        if dataset["url"].unique().size < len(dataset.index):
-            logging.warning("duplicate article URLs found in dataset - aborting publishing.")
+        dataset.drop(self.no_publish_cols, axis=1, inplace=True)
 
         dataset.to_csv(f"{self.data_dir}/{self.data_file}", index=False)
 
