@@ -22,6 +22,7 @@ The project consists of the following components:
 - **collectors**: a [Scrapy](https://scrapy.org/) project, responsible for scraping articles from [https://publications.americanalpineclub.org](https://publications.americanalpineclub.org/).
 - **opensearch-cluster**: an [OpenSearch](https://opensearch.org/) cluster, where the scraped articles are indexed.
 - **publishers**: functionality responsible for the publication of the articles index (e.g. as Kaggle dataset).
+- **notebooks**: a collection of Jupyter notebooks, for various dataset-based explorations and applications.
 - **dataset**: the raw dataset, in CSV format.
 
 ## Citation

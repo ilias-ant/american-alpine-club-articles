@@ -18,3 +18,4 @@ class Article(TimestampedItem):
     climb_year = scrapy.Field()
     publication_year = scrapy.Field()
     link_to_pdf = scrapy.Field()
+    referer = scrapy.Field()
