@@ -23,11 +23,11 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.9,<3.10"
 
-kaggle = "^1.5.12"
-notebook = "^6.5.2"
-pandas = "^1.5.1"
+kaggle = "~1.5.12"
+notebook = "~6.5.2"
+pandas = "~1.5.1"
 Scrapy = "~2.7.1"
-opensearch-py = "^2.0.0"
+opensearch-py = "~2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.4"
